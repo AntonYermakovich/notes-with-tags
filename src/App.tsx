@@ -7,7 +7,7 @@ import { useMemo } from 'react';
 import { v4 as uuidV4 } from 'uuid';
 import { NoteList } from './NoteList';
 import { NoteLayout } from './NoteLayout';
-import { Note } from './Note';
+import { NoteItem } from './NoteItem';
 import { EditNote } from './EditNote';
 
 export type Note = {
@@ -110,7 +110,7 @@ function App() {
           element={<NewNote onSubmit={onCreateNote} onAddTag={addTag} availableTags={tags} />}
         />
         <Route path="/:id" element={<NoteLayout notes={notesWithTags} />}>
-          <Route index element={<Note onDelete={onDeleteNote} />} />
+          <Route index element={<NoteItem onDelete={onDeleteNote} />} />
           <Route
             path="edit"
             element={<EditNote onSubmit={onUpdateNote} onAddTag={addTag} availableTags={tags} />}

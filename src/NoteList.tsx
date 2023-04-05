@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Badge, Button, Card, Col, Form, Modal, Row, Stack } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import ReactSelect from 'react-select';
+import ReactSelect from 'react-select/creatable';
 import { Tag } from './App';
 import './NoteList.scss';
 
